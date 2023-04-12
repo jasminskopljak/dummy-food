@@ -59,26 +59,13 @@ class DummyFoodHome extends StatelessWidget {
 
   Widget _buildMobileContainers(context) {
     return InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const ProductRoute()),
-        );
-      },
-      child: Card(
-        child: Column(mainAxisSize: MainAxisSize.min, children: const <Widget>[
-          ListTile(
-            leading: Icon(Icons.fastfood, color: Colors.deepOrangeAccent),
-            title: Text(
-              'Burgers',
-              style: TextStyle(fontSize: 22.0),
-            ),
-            subtitle: Text('Try the best burgers in the world',
-                style: TextStyle(fontSize: 17)),
-          ),
-        ]),
-      ),
-    );
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const ProductRoute()),
+          );
+        },
+        child: const Image(image: AssetImage('assets/images/food_1.jpg')));
   }
 }
 
